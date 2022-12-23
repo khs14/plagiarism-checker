@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<body style="text-align:center">
+    <h1>Plagiarism Checker</h1>
+    <p>% of Plagiarism is</p>
+    <p hidden id = "end">{{answer}}</p>
+    <div id="counter">
+       
+    </div>
+
+  
+    <script>
+        let counts=setInterval(updated);
+        let upto=0;
+        function updated(){
+            var count= document.getElementById("counter");
+            var endNbr = Number(document.getElementById("end").innerHTML);
+            count.innerHTML=++upto;
+            if(upto===endNbr)
+            {
+                clearInterval(counts);
+            }
+        }
+    </script>
+</body>
+</html>
